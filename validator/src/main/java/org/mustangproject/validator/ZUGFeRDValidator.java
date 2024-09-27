@@ -34,7 +34,7 @@ import org.xml.sax.InputSource;
 
 import com.helger.commons.io.stream.StreamHelper;
 
-import jakarta.xml.bind.DatatypeConverter;
+import javax.xml.bind.DatatypeConverter;
 
 //abstract class
 public class ZUGFeRDValidator {

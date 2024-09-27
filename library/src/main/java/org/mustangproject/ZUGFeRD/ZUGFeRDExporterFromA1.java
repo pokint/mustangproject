@@ -28,7 +28,7 @@ import org.apache.pdfbox.preflight.exception.ValidationException;
 import org.apache.pdfbox.preflight.parser.PreflightParser;
 import org.mustangproject.EStandard;
 
-import jakarta.activation.DataSource;
+import javax.activation.DataSource;
 
 public class ZUGFeRDExporterFromA1 extends ZUGFeRDExporterFromA3 {
 

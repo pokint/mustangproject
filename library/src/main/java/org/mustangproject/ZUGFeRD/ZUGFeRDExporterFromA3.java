@@ -72,8 +72,8 @@ import org.apache.xmpbox.xml.XmpSerializer;
 import org.mustangproject.EStandard;
 import org.mustangproject.FileAttachment;
 
-import jakarta.activation.DataSource;
-import jakarta.activation.FileDataSource;
+import javax.activation.DataSource;
+import javax.activation.FileDataSource;
 
 public class ZUGFeRDExporterFromA3 extends XRExporter implements IZUGFeRDExporter {
 	private boolean isFacturX = true;

@@ -38,7 +38,7 @@ import org.mustangproject.FileAttachment;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import jakarta.activation.DataSource;
+import javax.activation.DataSource;
 
 /***
  * Auto-detects the source PDF-A-Version and acts accordingly

@@ -27,7 +27,7 @@ import org.apache.pdfbox.preflight.ValidationResult;
 import org.apache.pdfbox.preflight.exception.ValidationException;
 import org.apache.pdfbox.preflight.parser.PreflightParser;
 
-import jakarta.activation.DataSource;
+import javax.activation.DataSource;
 
 public class OXExporterFromA1 extends OXExporterFromA3 {
 	protected boolean ignorePDFAErrors = false;

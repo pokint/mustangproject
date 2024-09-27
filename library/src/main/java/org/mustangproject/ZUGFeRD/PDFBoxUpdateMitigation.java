@@ -11,7 +11,7 @@ import java.io.OutputStream;
 import org.apache.pdfbox.io.IOUtils;
 import org.apache.pdfbox.preflight.parser.PreflightParser;
 
-import jakarta.activation.DataSource;
+import javax.activation.DataSource;
 
 // Copied from PDFBox preflight 2.0.x 
 final class ByteArrayDataSource implements DataSource

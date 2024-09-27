@@ -22,7 +22,7 @@ import java.io.Closeable;
 import java.io.IOException;
 import java.io.InputStream;
 
-import jakarta.activation.DataSource;
+import javax.activation.DataSource;
 import org.mustangproject.FileAttachment;
 
 public interface IZUGFeRDExporter extends Closeable, IExporter  {

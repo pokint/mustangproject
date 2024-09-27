@@ -27,7 +27,7 @@ import org.apache.pdfbox.preflight.ValidationResult;
 import org.apache.pdfbox.preflight.exception.ValidationException;
 import org.apache.pdfbox.preflight.parser.PreflightParser;
 
-import jakarta.activation.DataSource;
+import javax.activation.DataSource;
 
 public class DXExporterFromA1 extends DXExporterFromA3 {
 	protected boolean ignorePDFAErrors = false;
