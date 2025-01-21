@@ -490,7 +490,7 @@ public class OXPullProvider extends ZUGFeRD2PullProvider {
 		return profile;
 	}
 
-	private String buildPaymentTermsXml() {
+	protected String buildPaymentTermsXml() {
 
 		final IZUGFeRDPaymentTerms paymentTerms = trans.getPaymentTerms();
 		if (paymentTerms == null) {
