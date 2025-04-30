@@ -432,7 +432,7 @@ public class ZUGFeRD1PullProvider extends ZUGFeRD2PullProvider {
 		profile = p;
 	}
 
-	private String buildPaymentTermsXml() {
+	protected String buildPaymentTermsXml() {
 		final IZUGFeRDPaymentTerms[] paymentTerms = trans.getExtendedPaymentTerms();
 
 		String paymentTermsXml = "";

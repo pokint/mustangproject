@@ -58,7 +58,7 @@ public class ZUGFeRD2PullProvider implements IXMLProvider {
 	protected byte[] zugferdData;
 	protected IExportableTransaction trans;
 	protected TransactionCalculator calc;
-	private String paymentTermsDescription;
+	protected String paymentTermsDescription;
 	protected Profile profile = Profiles.getByName("EN16931");
 
 
@@ -975,7 +975,7 @@ public class ZUGFeRD2PullProvider implements IXMLProvider {
 		profile = p;
 	}
 
-	private String buildPaymentTermsXml() {
+	protected String buildPaymentTermsXml() {
 
 		ArrayList<IZUGFeRDPaymentTerms> paymentTerms = new ArrayList<IZUGFeRDPaymentTerms>(Arrays.asList(trans.getExtendedPaymentTerms()));
 

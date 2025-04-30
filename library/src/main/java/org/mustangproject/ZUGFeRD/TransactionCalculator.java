@@ -37,7 +37,7 @@ public class TransactionCalculator implements IAbsoluteValueProvider {
 	 *
 	 * @return prepaid amount
 	 */
-	protected BigDecimal getTotalPrepaid() {
+	public BigDecimal getTotalPrepaid() {
 		if (trans.getTotalPrepaidAmount() == null) {
 			return BigDecimal.ZERO;
 		} else {
@@ -64,7 +64,7 @@ public class TransactionCalculator implements IAbsoluteValueProvider {
 	 * @param percent a specific rate, or null for any rate
 	 * @return the total amount
 	 */
-	protected BigDecimal getChargesForPercent(BigDecimal percent) {
+	public BigDecimal getChargesForPercent(BigDecimal percent) {
 		IZUGFeRDAllowanceCharge[] charges = trans.getZFCharges();
 		return sumAllowanceCharge(percent, charges);
 	}
@@ -106,7 +106,7 @@ public class TransactionCalculator implements IAbsoluteValueProvider {
 	 * @param percent a specific rate, or null for any rate
 	 * @return the space separated String
 	 */
-	protected String getChargeReasonForPercent(BigDecimal percent) {
+	public String getChargeReasonForPercent(BigDecimal percent) {
 		IZUGFeRDAllowanceCharge[] charges = trans.getZFCharges();
 		String res = getAllowanceChargeReasonForPercent(percent, charges);
 		if ("".equals(res)) {
@@ -133,7 +133,7 @@ public class TransactionCalculator implements IAbsoluteValueProvider {
 	 * @param percent a specific rate, or null for any rate
 	 * @return the space separated String
 	 */
-	protected String getAllowanceReasonForPercent(BigDecimal percent) {
+	public String getAllowanceReasonForPercent(BigDecimal percent) {
 		IZUGFeRDAllowanceCharge[] allowances = trans.getZFAllowances();
 		String res = getAllowanceChargeReasonForPercent(percent, allowances);
 		if ("".equals(res)) {
@@ -148,7 +148,7 @@ public class TransactionCalculator implements IAbsoluteValueProvider {
 	 * @param percent a specific rate, or null for any rate
 	 * @return the total amount
 	 */
-	protected BigDecimal getAllowancesForPercent(BigDecimal percent) {
+	public BigDecimal getAllowancesForPercent(BigDecimal percent) {
 		IZUGFeRDAllowanceCharge[] allowances = trans.getZFAllowances();
 		return sumAllowanceCharge(percent, allowances);
 	}
@@ -159,7 +159,7 @@ public class TransactionCalculator implements IAbsoluteValueProvider {
 	 *
 	 * @return item sum
 	 */
-	protected BigDecimal getTotal() {
+	public BigDecimal getTotal() {
 		BigDecimal dec = Stream.of(trans.getZFItems()).map(LineCalculator::new)
 			.map(LineCalculator::getItemTotalNetAmount).reduce(ZERO, BigDecimal::add);
 		return dec;
@@ -185,7 +185,7 @@ public class TransactionCalculator implements IAbsoluteValueProvider {
 	 *
 	 * @return which taxes have been used with which amounts in this invoice
 	 */
-	protected HashMap<BigDecimal, VATAmount> getVATPercentAmountMap() {
+	public HashMap<BigDecimal, VATAmount> getVATPercentAmountMap() {
 		HashMap<BigDecimal, VATAmount> hm = new HashMap<>();
 		final String vatDueDateTypeCode = trans.getVATDueDateTypeCode();
 
