@@ -110,6 +110,7 @@
             <groupId>com.helger</groupId>
             <artifactId>en16931-cii2ubl</artifactId>
             <version>${version.com.helger.en16931-cii2ubl}</version>
+            <scope>provided</scope>
         </dependency>
 
         <!-- test dependencies -->
