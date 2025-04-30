@@ -734,7 +734,7 @@ public class ZUGFeRD2PullProvider implements IXMLProvider {
 				final String documentContent = Base64.getEncoder().encodeToString(f.getData());
 				xml.append("<ram:AdditionalReferencedDocument>"
 					+ "<ram:IssuerAssignedID>" + f.getFilename() + "</ram:IssuerAssignedID>"
-					+ "<ram:TypeCode>916</ram:TypeCode>"
+					+ "<ram:TypeCode>" + f.getRelation() + "</ram:TypeCode>"
 					+ "<ram:Name>" + f.getDescription() + "</ram:Name>"
 					+ "<ram:AttachmentBinaryObject mimeCode=\"" + f.getMimetype() + "\""
 					+ " filename=\"" + f.getFilename() + "\">" + documentContent + "</ram:AttachmentBinaryObject>"
