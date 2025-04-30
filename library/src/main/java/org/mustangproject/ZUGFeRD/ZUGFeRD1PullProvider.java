@@ -350,7 +350,7 @@ public class ZUGFeRD1PullProvider extends ZUGFeRD2PullProvider {
 		zugferdData = XMLTools.removeBOM(zugferdRaw);
 	}
 
-	private String buildAlternatePaymentTermsXml() {
+	protected String buildAlternatePaymentTermsXml() {
 		final IZUGFeRDPaymentTerms[] paymentTerms = trans.getExtendedPaymentTerms();
 
 		String paymentTermsXml = "";
