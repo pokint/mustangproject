@@ -1215,7 +1215,7 @@ public class ZUGFeRD2PullProvider implements IXMLProvider {
 		return includedNotes.stream().map(IncludedNote::toCiiXml).collect(Collectors.joining(""));
 	}
 
-	private String buildPaymentTermsXml() {
+	protected String buildPaymentTermsXml() {
 
 		ArrayList<IZUGFeRDPaymentTerms> paymentTerms = new ArrayList<>();
 		{
